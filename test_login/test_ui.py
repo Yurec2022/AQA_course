@@ -1,11 +1,5 @@
+from playwright.sync_api import sync_playwright, Page
 
-
-
-
-def test_sum():
-    a = 5
-    b = 10
-    if a > b:
-        print("a+")
-    else:
-        print("b+")
+def test_mane_page(page:Page):
+    page.goto("https://aqa-proka4.org/sandbox/web")
+    assert page.title() == "WEB Sandbox - Практика автоматизации"
